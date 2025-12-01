@@ -2,15 +2,15 @@
 // Note: type annotations allow type checking and IDEs autocompletion
 
 // require('dotenv').config({ path: `.env.local`, override: true });
-require('dotenv').config({});
+// require('dotenv').config({});
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 const logo = '/img/avatar.webp';
-const organizationName = "Miracoli"; // Your github username or your organization name
-const projectName = "/"; // your repo name, ex: docusaurus-2, this is used to generate edit project link
-const baseUrl = projectName.includes(".github.io") ? '/' : `/${projectName}`;
+const organizationName = "mira-miracoli"; // Your github username or your organization name
+const projectName = "personal-blog"; // your repo name, ex: docusaurus-2, this is used to generate edit project link
+const baseUrl = "/";
 const footerLinks = [
     {
         title: 'Miracoli',
@@ -59,24 +59,24 @@ const config = {
     trailingSlash: false,
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
-    headTags: [
-        {
-            tagName: 'meta',
-            attributes: {
-                name: 'google-site-verification',
-                content: process.env.GOOGLE_SITE_VERIFICATION,
-            }
-        }
-    ],
+    // headTags: [
+    //     {
+    //         tagName: 'meta',
+    //         attributes: {
+    //             name: 'google-site-verification',
+    //             content: process.env.GOOGLE_SITE_VERIFICATION,
+    //         }
+    //     }
+    // ],
 
     // process the env variables
-    customFields: {
-        // Put your custom environment here
-        CANNY_BOARD_TOKEN: process.env.CANNY_BOARD_TOKEN,
-        GITHUB_REPO_ID: process.env.GITHUB_REPO_ID,
-        GITHUB_REPO: process.env.GITHUB_REPO,
-        GITHUB_CATEGORY_ID: process.env.GITHUB_CATEGORY_ID,
-    },
+    // customFields: {
+    //     // Put your custom environment here
+    //     CANNY_BOARD_TOKEN: process.env.CANNY_BOARD_TOKEN,
+    //     GITHUB_REPO_ID: process.env.GITHUB_REPO_ID,
+    //     GITHUB_REPO: process.env.GITHUB_REPO,
+    //     GITHUB_CATEGORY_ID: process.env.GITHUB_CATEGORY_ID,
+    // },
 
     // Even if you don't use internalization, you can use this field to set useful
     // metadata like html lang. For example, if your site is Chinese, you may want
@@ -139,34 +139,34 @@ const config = {
                 disableInDev: true,
             }),
         ],
-        [
-            '@docusaurus/plugin-pwa',
-            {
-                debug: true,
-                offlineModeActivationStrategies: [
-                    'appInstalled',
-                    'standalone',
-                    'queryString',
-                ],
-                pwaHead: [
-                    {
-                        tagName: 'link',
-                        rel: 'icon',
-                        href: 'https://github.com/TienNHM.png', // your PWA icon
-                    },
-                    {
-                        tagName: 'link',
-                        rel: 'manifest',
-                        href: '/manifest.json', // your PWA manifest
-                    },
-                    {
-                        tagName: 'meta',
-                        name: 'theme-color',
-                        content: 'rgb(37, 194, 160)',
-                    },
-                ],
-            },
-        ],
+        //[
+        //    '@docusaurus/plugin-pwa',
+        //    {
+        //        debug: true,
+        //        offlineModeActivationStrategies: [
+        //            'appInstalled',
+        //            'standalone',
+        //            'queryString',
+        //        ],
+        //        pwaHead: [
+        //            {
+        //                tagName: 'link',
+        //                rel: 'icon',
+        //                href: 'https://github.com/TienNHM.png', // your PWA icon
+        //            },
+        //            {
+        //                tagName: 'link',
+        //                rel: 'manifest',
+        //                href: '/manifest.json', // your PWA manifest
+        //            },
+        //            {
+        //                tagName: 'meta',
+        //                name: 'theme-color',
+        //                content: 'rgb(37, 194, 160)',
+        //            },
+        //        ],
+        //    },
+        //],
         '@docusaurus/theme-mermaid',
     ],
 
@@ -221,7 +221,7 @@ const config = {
                 darkTheme: darkCodeTheme,
             },
             metadata: [
-                { name: 'keywords', content: 'Miracoli, blog, coding, tools, others keywords...' },
+                { name: 'keywords', content: 'Miracoli, blog, personal' },
                 { name: 'description', content: 'Miracoli description...' },
                 { name: 'author', content: 'Miracoli' },
                 { name: 'title', content: 'Miracoli - Blog' },
@@ -229,20 +229,20 @@ const config = {
                 { property: 'og:description', content: 'Miracoli description...' },
                 { property: 'og:type', content: 'website' },
                 { property: 'og:image', content: logo },
-                { property: 'og:url', content: 'https://Miracoli.com' },
-                { name: 'twitter:card', content: 'summary_large_image' },
-                { name: 'twitter:image', content: logo },
-                { name: 'twitter:title', content: 'Miracoli - Blog' },
-                { name: 'twitter:description', content: 'Miracoli description...' },
+                { property: 'og:url', content: 'https://blog.centip3.de' }
+                // { name: 'twitter:card', content: 'summary_large_image' },
+                // { name: 'twitter:image', content: logo },
+                // { name: 'twitter:title', content: 'Miracoli - Blog' },
+                // { name: 'twitter:description', content: 'Miracoli description...' },
             ],
-            algolia: {
-                // The application ID provided by Algolia
-                appId: process.env.ALGOLIA_APP_ID,
-                // Public API key: it is safe to commit it
-                apiKey: process.env.ALGOLIA_API_KEY,
-                indexName: process.env.ALGOLIA_INDEX_NAME,
-                contextualSearch: true,
-            },
+           // algolia: {
+           //     // The application ID provided by Algolia
+           //     appId: process.env.ALGOLIA_APP_ID,
+           //     // Public API key: it is safe to commit it
+           //     apiKey: process.env.ALGOLIA_API_KEY,
+           //     indexName: process.env.ALGOLIA_INDEX_NAME,
+           //     contextualSearch: true,
+           // },
         }),
 };
 
