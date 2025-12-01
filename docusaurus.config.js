@@ -9,7 +9,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 const logo = '/img/avatar.webp';
 const organizationName = "Miracoli"; // Your github username or your organization name
-const projectName = "Miracoli.github.io"; // your repo name, ex: docusaurus-2, this is used to generate edit project link
+const projectName = "/"; // your repo name, ex: docusaurus-2, this is used to generate edit project link
 const baseUrl = projectName.includes(".github.io") ? '/' : `/${projectName}`;
 const footerLinks = [
     {
