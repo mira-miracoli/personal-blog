@@ -78,13 +78,7 @@ const config = {
     //     GITHUB_CATEGORY_ID: process.env.GITHUB_CATEGORY_ID,
     // },
 
-    // Even if you don't use internalization, you can use this field to set useful
-    // metadata like html lang. For example, if your site is Chinese, you may want
-    // to replace "en" with "zh-Hans".
-    i18n: {
-        defaultLocale: 'de',
-        locales: ['de', 'en'],
-    },
+
 
     presets: [
         [
@@ -96,7 +90,6 @@ const config = {
                     // Please change this to your repo.
                     // Remove this to remove the "edit this page" links.
                     editUrl: `https://github.com/${organizationName}/${projectName}/tree/master`,
-                    editLocalizedFiles: true,
                 },
                 blog: {
                     showReadingTime: true,
@@ -112,7 +105,6 @@ const config = {
                     blogPostComponent: '@theme/BlogPostPage',
                     blogTagsListComponent: '@theme/BlogTagsListPage',
                     blogTagsPostsComponent: '@theme/BlogTagsPostsPage',
-                    editLocalizedFiles: true,
                 },
                 theme: {
                     customCss: require.resolve('./src/css/custom.css'),
@@ -200,15 +192,12 @@ const config = {
                     { to: '/community', label: 'Community', position: 'left' },
                     { to: '/contact', label: 'Contact', position: 'left' },
                     {
-                        href: 'https://github.com/Miracoli',
+                        href: 'https://github.com/mira-miracoli',
                         // label: 'GitHub',
                         position: 'right',
                         className: "header-github-link",
                     },
-                    {
-                        type: 'localeDropdown',
-                        position: 'right',
-                    },
+
                 ],
             },
             footer: {

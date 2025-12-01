@@ -4,7 +4,7 @@ title: Warum dieser Blog?
 authors: [miracoli]
 tags: [hello]
 enableComments: false # for Gisqus comments, set to true
-draft: true # set to true to hide this post from the site
+draft: false # set to true to hide this post from the site
 ---
 
 Willkommen auf Miracolí, meinem, persönlichem Blog. 
